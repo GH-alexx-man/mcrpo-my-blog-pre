@@ -252,8 +252,7 @@ function PostPage() {
 
   // ТУТ ДОБАВИЛ: функция для удаления комментария
   const handleDeleteComment = async (commentId) => {
-    if (!window.confirm('Удалить комментарий?')) return;
-    
+
     try {
       const response = await fetch(`${API_URL}/posts/${id}/comments/${commentId}`, {
         method: 'DELETE'
